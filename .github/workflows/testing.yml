@@ -1,0 +1,12 @@
+name: Test
+on: [push, workflow_dispatch]
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env vars
+        run: printenv
+      - name: Set env vars of VM
+        run: |
+        MYVAR=test_var
+        echo $MYVAR
