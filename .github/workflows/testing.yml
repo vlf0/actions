@@ -13,6 +13,8 @@ jobs:
         run: |
           MYVAR=test_var
           echo $MYVAR
+          echo ${{ env.SECRET }}
+          echo 'secret'
           echo $SECRET
           echo ${{ secrets.SECRET }}
           echo ${{ secrets.KIS_URL }}
