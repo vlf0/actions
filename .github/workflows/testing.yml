@@ -15,3 +15,5 @@ jobs:
           echo $MYVAR
           echo $SECRET
           echo ${{ secrets.SECRET }}
+          echo ${{ secrets.KIS_URL }}
+          echo ${{ secrets.NEW }}
