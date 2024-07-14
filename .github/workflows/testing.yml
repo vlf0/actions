@@ -3,8 +3,9 @@ on: [push, workflow_dispatch]
 jobs:
   testing:
     runs-on: ubuntu-latest
-    env:
-      SECRET: ${{ secrets.SECRET }}
+    environment: dev
+#   env:
+#     SECRET: ${{ secrets.SECRET }}
     steps:
       - name: Print env vars
         run: printenv
