@@ -4,8 +4,8 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     environment: dev
-#   env:
-#     SECRET: ${{ secrets.SECRET }}
+    env:
+      SECRET: ${{ secrets.SECRET }}
     steps:
       - name: Print env vars
         run: printenv
