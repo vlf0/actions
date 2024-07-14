@@ -8,5 +8,5 @@ jobs:
         run: printenv
       - name: Set env vars of VM
         run: |
-        MYVAR=test_var
-        echo $MYVAR
+          MYVAR=test_var
+          echo $MYVAR
