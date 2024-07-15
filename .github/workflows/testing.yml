@@ -8,7 +8,9 @@ jobs:
       SECRET: ${{ secrets.SECRET }}
     steps:
       - name: testing head
-        run: echo ${{ github.head_ref }}
+        run: |
+          echo $GITHUB_HEAD_REF
+          echo ${{ github.head_ref }}
       - name: Print env vars
         run: printenv
       - name: Set env vars of VM
