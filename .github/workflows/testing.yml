@@ -13,8 +13,7 @@ jobs:
           git_branch=${GITHUB_REF#refs/heads/}
           echo $git_branch
           echo END
-          echo 'branch=$(echo ${GITHUB_REF#refs/heads/})' >> '$GITHUB_ENV'
-
+          echo branch=$git_branch >> $GITHUB_ENV
       - name: Set env vars of VM
         run: |
           echo $git_branch
