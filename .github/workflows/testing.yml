@@ -13,15 +13,9 @@ jobs:
           git_branch=${GITHUB_REF#refs/heads/}
           echo $git_branch
           echo END
-      - name: Print env vars
-        run: printenv
+          echo 'branch=$(echo ${GITHUB_REF#refs/heads/})' >> '$GITHUB_ENV'
+
       - name: Set env vars of VM
         run: |
-          MYVAR=test_var
-          echo $MYVAR
-          echo ${{ env.SECRET }}
-          echo 'secret'
-          echo $SECRET
-          echo ${{ secrets.SECRET }}
-          echo ${{ secrets.KIS_URL }}
-          echo ${{ secrets.NEW }}
+          echo $git_branch
+          echo ${{ env.branch }}
