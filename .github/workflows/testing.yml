@@ -9,8 +9,10 @@ jobs:
     steps:
       - name: testing head
         run: |
-          echo $GITHUB_HEAD_REF
-          echo ${{ github.head_ref }}
+          echo START
+          git_branch=${GITHUB_REF#refs/heads/}
+          echo git_branch
+          echo START
       - name: Print env vars
         run: printenv
       - name: Set env vars of VM
